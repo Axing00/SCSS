@@ -4,9 +4,9 @@
 }
 
 /* 변수사용하기 */
-$main-color:orange;
-$font-color:white;
-$btn-width:100px;
+$main-color: orange;
+$font-color: white;
+$btn-width: 100px;
 
 
 
@@ -92,7 +92,7 @@ button {
 	인자에 기본적으로 값이 넣어져 있는 경우에는 
 	인클루드했을때 인자값을 안넣어줘도 에러가 나지 않는다
 */
-@mixin box-style ($bg-color:yellow, $font-color:red) {
+@mixin box-style ($bg-color: yellow, $font-color: red) {
 	width: 100px;
 	height: 100px;
 	display: flex;
@@ -140,18 +140,18 @@ button {
 }
 
 
-@mixin p-style($hv-color:red){
+@mixin p-style($hv-color: red) {
 	@content;
 	width: 200px;
 	height: 100px;
 
-	&:hover{
+	&:hover {
 		background-color: $hv-color;
 	}
 }
 
-.p_box{
-	@include p-style{
+.p_box {
+	@include p-style {
 		color: #fff;
 		background-color: burlywood;
 	}
