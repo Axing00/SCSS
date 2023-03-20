@@ -1,6 +1,6 @@
 * {
-	margin: 0;
-	padding: 0;
+  margin: 0;
+  padding: 0;
 }
 
 /* 변수사용하기 */
@@ -8,15 +8,13 @@ $main-color: orange;
 $font-color: white;
 $btn-width: 100px;
 
-
-
 /* 단축속성으로 중첩문 사용하기 */
 p {
-	font: {
-		style: italic;
-		weight: 900;
-		size: 32px;
-	}
+  font: {
+    style: italic;
+    weight: 900;
+    size: 32px;
+  }
 }
 
 /*
@@ -25,135 +23,124 @@ p {
 */
 
 .first-btn {
-	&:hover {
-		background: {
-			color: red;
-		}
-	}
+  &:hover {
+    background: {
+      color: red;
+    }
+  }
 }
 
 .second-btn {
-	&:hover {
-		background: {
-			color: blue;
-		}
-	}
+  &:hover {
+    background: {
+      color: blue;
+    }
+  }
 }
-
 
 button {
-	&:nth-of-type(1) {
-		color: $font-color;
-		background-color: $main-color;
-		width: $btn-width;
-	}
+  &:nth-of-type(1) {
+    color: $font-color;
+    background-color: $main-color;
+    width: $btn-width;
+  }
 
-	&:nth-of-type(2) {
-		color: $font-color;
-		background-color: $main-color;
-		width: 200px;
-	}
+  &:nth-of-type(2) {
+    color: $font-color;
+    background-color: $main-color;
+    width: 200px;
+  }
 
-	&:nth-of-type(3) {
-		color: $font-color;
-		background-color: $main-color;
-		width: 300px;
-	}
+  &:nth-of-type(3) {
+    color: $font-color;
+    background-color: $main-color;
+    width: 300px;
+  }
 }
-
-
-
 
 /* 
 	인자를 입력시에는 인클루드 할때 인자값을 꼭 입력야지
 	에러가 나지 않음
 */
-@mixin box-style ($bg-color, $font-color) {
-	width: 100px;
-	height: 100px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: $bg-color;
-	color: $font-color;
+@mixin box-style($bg-color, $font-color) {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-color;
+  color: $font-color;
 }
 
 .one {
-	@include box-style (red, white);
+  @include box-style(red, white);
 }
 
 .two {
-	@include box-style(purple, yellow);
+  @include box-style(purple, yellow);
 }
-
-
 
 /* 
 	인자에 기본적으로 값이 넣어져 있는 경우에는 
 	인클루드했을때 인자값을 안넣어줘도 에러가 나지 않는다
 */
-@mixin box-style ($bg-color: yellow, $font-color: red) {
-	width: 100px;
-	height: 100px;
-	display: flex;
-	justify-content: center;
-	align-items: center;
-	background-color: $bg-color;
-	color: $font-color;
+@mixin box-style($bg-color: yellow, $font-color: red) {
+  width: 100px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: $bg-color;
+  color: $font-color;
 }
 
-
 .one {
-	@include box-style;
+  @include box-style;
 }
 
 .two {
-	@include box-style(purple, yellow);
+  @include box-style(purple, yellow);
 }
-
 
 /* @content 사용하기 */
 
-@mixin btn-style ($hv-color) {
-	@content;
-	width: 100px;
-	height: 25px;
+@mixin btn-style($hv-color) {
+  @content;
+  width: 100px;
+  height: 25px;
 
-	&:hover {
-		background-color: $hv-color;
-	}
+  &:hover {
+    background-color: $hv-color;
+  }
 }
 
 .click_one {
-	@include btn-style(orange) {
-		color: white; //mixin 정의된곳 안에 @content 지시자에 정의가됨
-		background-color: tomato; //mixin 정의된곳 안에 @content 지시자에 정의가됨
-	}
-
+  @include btn-style(orange) {
+    color: white; //mixin 정의된곳 안에 @content 지시자에 정의가됨
+    background-color: tomato; //mixin 정의된곳 안에 @content 지시자에 정의가됨
+  }
 }
 
 .click_two {
-	@include btn-style(green) {
-		color: red; //mixin 정의된곳 안에 @content 지시자에 정의가됨
-		background-color: teal; //mixin 정의된곳 안에 @content 지시자에 정의가됨
-	}
+  @include btn-style(green) {
+    color: red; //mixin 정의된곳 안에 @content 지시자에 정의가됨
+    background-color: teal; //mixin 정의된곳 안에 @content 지시자에 정의가됨
+  }
 }
 
-
 @mixin p-style($hv-color: red) {
-	@content;
-	width: 200px;
-	height: 100px;
+  @content;
+  width: 200px;
+  height: 100px;
 
-	&:hover {
-		background-color: $hv-color;
-	}
+  &:hover {
+    background-color: $hv-color;
+  }
 }
 
 .p_box {
-	@include p-style {
-		color: #fff;
-		background-color: burlywood;
-	}
-
+  @include p-style {
+    color: #fff;
+    background-color: burlywood;
+  }
 }
