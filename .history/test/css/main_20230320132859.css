@@ -1,4 +1,5 @@
 @charset "UTF-8";
+
 * {
   margin: 0;
   padding: 0;
@@ -27,13 +28,17 @@ button:nth-child(1) {
   background-color: tomato;
   width: 100px;
 }
+
 button:nth-child(2) {
   color: white;
   background-color: tomato;
   width: 200px;
 }
+
 button:nth-child(3) {
   color: white;
   background-color: tomato;
   width: 300px;
-}/*# sourceMappingURL=main.css.map */
+}
+
+/*# sourceMappingURL=main.css.map */

@@ -1,0 +1,62 @@
+
+*{
+	margin: 0;
+	padding:0;
+}
+
+p{
+	font: {
+		style: italic;
+		weight: 900;
+		size: 32px;
+	};
+}
+
+/*
+	&는 상위 태그
+*/
+
+.first-btn{
+	&:hover{
+		background: {
+			color: red;
+		};
+	}
+}
+
+.second-btn{
+	&:hover{
+		background: {
+			color: blue;
+		};
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
