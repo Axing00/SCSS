@@ -1,22 +1,15 @@
-* {
+
+*{
 	margin: 0;
-	padding: 0;
+	padding:0;
 }
 
-
-$main-color:orange;
-$font-color:white;
-$btn-width:100px;
-
-
-
-
-p {
+p{
 	font: {
 		style: italic;
 		weight: 900;
 		size: 32px;
-	}
+	};
 }
 
 /*
@@ -24,39 +17,66 @@ p {
 	상위선택자 참조는 의사(가상)클래스를 선택하고자 할때 특히 유용한 방법이다.
 */
 
-.first-btn {
-	&:hover {
+.first-btn{
+	&:hover{
 		background: {
 			color: red;
-		}
+		};
 	}
 }
 
-.second-btn {
-	&:hover {
+.second-btn{
+	&:hover{
 		background: {
 			color: blue;
-		}
+		};
 	}
 }
 
 
-button {
+button{
 	&:nth-of-type(1) {
-		color: $font-color;
-		background-color: $main-color;
-		width: $btn-width;
+		color: white;
+		background-color: tomato;
+		width: 100px;
 	}
-
 	&:nth-of-type(2) {
-		color: $font-color;
-		background-color: $main-color;
+		color: white;
+		background-color: tomato;
 		width: 200px;
 	}
-
 	&:nth-of-type(3) {
-		color: $font-color;
-		background-color: $main-color;
+		color: white;
+		background-color: tomato;
 		width: 300px;
 	}
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

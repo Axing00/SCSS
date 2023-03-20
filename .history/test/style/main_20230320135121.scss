@@ -6,7 +6,6 @@
 
 $main-color:orange;
 $font-color:white;
-$btn-width:100px;
 
 
 
@@ -45,7 +44,7 @@ button {
 	&:nth-of-type(1) {
 		color: $font-color;
 		background-color: $main-color;
-		width: $btn-width;
+		width: 100px;
 	}
 
 	&:nth-of-type(2) {

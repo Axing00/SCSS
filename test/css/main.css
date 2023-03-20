@@ -22,18 +22,18 @@ p {
   background-color: blue;
 }
 
-button:nth-child(1) {
+button:nth-of-type(1) {
   color: white;
-  background-color: tomato;
+  background-color: orange;
   width: 100px;
 }
-button:nth-child(2) {
+button:nth-of-type(2) {
   color: white;
-  background-color: tomato;
+  background-color: orange;
   width: 200px;
 }
-button:nth-child(3) {
+button:nth-of-type(3) {
   color: white;
-  background-color: tomato;
+  background-color: orange;
   width: 300px;
 }/*# sourceMappingURL=main.css.map */

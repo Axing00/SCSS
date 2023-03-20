@@ -1,0 +1,83 @@
+
+*{
+	margin: 0;
+	padding:0;
+}
+
+p{
+	font: {
+		style: italic;
+		weight: 900;
+		size: 32px;
+	};
+}
+
+/*
+	&는 상위선택자 
+	상위선택자 참조는 의사(가상)클래스를 선택하고자 할때 특히 유용한 방법이다.
+*/
+
+.first-btn{
+	&:hover{
+		background: {
+			color: red;
+		};
+	}
+}
+
+.second-btn{
+	&:hover{
+		background: {
+			color: blue;
+		};
+	}
+}
+
+
+button{
+	display: block;
+	&:nth-of-type(1) {
+		color: white;
+		background-color: tomato;
+		width: 100px;
+	}
+	&:nth-child(2) {
+		color: white;
+		background-color: tomato;
+		width: 200px;
+	}
+	&:nth-child(3) {
+		color: white;
+		background-color: tomato;
+		width: 300px;
+	}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
