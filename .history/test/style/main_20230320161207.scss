@@ -88,6 +88,8 @@ button {
 
 
 
+
+
 /* 
 	인자에 기본적으로 값이 넣어져 있는 경우에는 
 	인클루드했을때 인자값을 안넣어줘도 에러가 나지 않는다
@@ -112,48 +114,4 @@ button {
 }
 
 
-/* @content 사용하기 */
-
-@mixin btn-style ($hv-color) {
-	@content;
-	width: 100px;
-	height: 25px;
-
-	&:hover {
-		background-color: $hv-color;
-	}
-}
-
-.click_one {
-	@include btn-style(orange) {
-		color: white; //mixin 정의된곳 안에 @content 지시자에 정의가됨
-		background-color: tomato; //mixin 정의된곳 안에 @content 지시자에 정의가됨
-	}
-
-}
-
-.click_two {
-	@include btn-style(green) {
-		color: red; //mixin 정의된곳 안에 @content 지시자에 정의가됨
-		background-color: teal; //mixin 정의된곳 안에 @content 지시자에 정의가됨
-	}
-}
-
-
-@mixin p-style($hv-color:red){
-	@content;
-	width: 200px;
-	height: 100px;
-
-	&:hover{
-		background-color: $hv-color;
-	}
-}
-
-.p_box{
-	@include p-style{
-		color: #fff;
-		background-color: burlywood;
-	}
-
-}
+/* @content */
