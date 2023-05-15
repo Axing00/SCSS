@@ -1,0 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.one {
+  width: 100px;
+  height: 25px;
+  color: #fff;
+  background-color: tomato;
+}
+.one:hover {
+  background-color: orange;
+}
+
+.two {
+  width: 100px;
+  height: 25px;
+  color: red;
+  background-color: teal;
+}
+.two:hover {
+  background-color: green;
+}/*# sourceMappingURL=content.css.map */

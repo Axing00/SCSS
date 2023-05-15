@@ -1,0 +1,33 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+@mixin btn-style($hv-color) {
+	width: 100px;
+	height: 25px;
+	@content;
+
+	&:hover {
+		background-color: $hv-color;
+	}
+}
+
+.one {
+	@include btn-style(orange) {
+		color: #fff;
+		background-color: tomato;
+	}
+}
+
+.two {
+	@include btn-style(green) {
+		color: red;
+		background-color: teal;
+	}
+}
+
+
+// 믹스인은 스타일 블록을 전달받아 선언문에 적용할 수 있다.
+// @content 지시자를 이용하면 스타일 블록 전체를 믹스인으로 넘길 수 있다.
+// 인자와 스타일 블록을 모두 전달 받는 형태의 믹스인을 정의할 수 있다.
