@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.container {
+  background-color: yellow;
+}
+.container h1 {
+  color: red;
+}
+.container p {
+  color: tomato;
+}
+.container p span {
+  color: aqua;
+}/*# sourceMappingURL=main_20230317160835.css.map */
