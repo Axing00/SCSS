@@ -1,1 +1,19 @@
-/*# sourceMappingURL=mediaquery.css.map */
+div {
+  width: 100px;
+  height: 100px;
+}
+@media all and (min-width:300px) {
+  div {
+    background-color: cadetblue;
+  }
+}
+@media all and (min-width:600px) {
+  div {
+    background-color: orange;
+  }
+}
+@media all and (min-width:900px) {
+  div {
+    background-color: purple;
+  }
+}/*# sourceMappingURL=mediaquery.css.map */
